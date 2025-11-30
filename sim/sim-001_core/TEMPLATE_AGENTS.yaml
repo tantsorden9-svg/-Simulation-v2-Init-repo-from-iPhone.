@@ -1,1 +1,17 @@
+meta:
+  sim_id: "SIM-XXX"
+  physics_version: 0.1
 
+agents:
+  - id: "agent-001"
+    type: "basic"
+    role: "test"
+    initial_state:
+      x: 0
+      y: 0
+      energy: 100
+    behavior:
+      policy: "rule_based"   # або "script", "ml"
+      params:
+        move_prob: 0.8
+        rest_prob: 0.2
