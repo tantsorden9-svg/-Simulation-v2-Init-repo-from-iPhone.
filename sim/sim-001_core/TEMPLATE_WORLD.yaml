@@ -1,1 +1,32 @@
+meta:
+  id: "world-XXX"
+  name: "Назва світу"
+  sim_id: "SIM-XXX"
+  physics_version: 0.1
+  description: "1–2 речення про цей світ."
 
+space:
+  type: "grid"          # або "graph", "continuous", "abstract"
+  size:
+    width: 10
+    height: 10
+
+entities:
+  # Агент, об'єкт, зона тощо
+  - id: "agent-001"
+    kind: "agent"       # "agent" | "object" | "zone"
+    position:
+      x: 0
+      y: 0
+    props:
+      speed: 1
+      vision_range: 3
+
+rules:
+  tick:
+    max_ticks: 100
+    stop_conditions:
+      - type: "no_agents"      # або "goal_reached", "timeout"
+  logging:
+    enabled: true
+    level: "info"
