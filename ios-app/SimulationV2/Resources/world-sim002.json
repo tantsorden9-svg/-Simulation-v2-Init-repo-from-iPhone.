@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "id": "world-001",
+    "name": "Test World v1",
+    "sim_id": "SIM-002",
+    "physics_version": "0.1",
+    "description": "Мінімальний тестовий світ для перевірки структури."
+  },
+  "width": 8,
+  "height": 8,
+  "entities": [
+    {
+      "id": "agent-001",
+      "kind": "agent",
+      "position": { "x": 0, "y": 0 },
+      "props": { "speed": 1, "vision_range": 2, "move_prob": 0.85 },
+      "tags": {}
+    },
+    {
+      "id": "goal-001",
+      "kind": "object",
+      "position": { "x": 7, "y": 7 },
+      "props": {},
+      "tags": { "type": "goal" }
+    }
+  ],
+  "rules": {
+    "max_ticks": 50,
+    "stop_conditions": ["reached_goal", "max_ticks"]
+  }
+}
